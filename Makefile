@@ -9,7 +9,7 @@ ENABLE_AIRCOPY                ?= 0
 ENABLE_FMRADIO                ?= 1
 ENABLE_NOAA                   ?= 0
 ENABLE_VOICE                  ?= 0
-ENABLE_VOX                    ?= 1
+ENABLE_VOX                    ?= 0
 ENABLE_ALARM                  ?= 0
 ENABLE_TX1750                 ?= 0
 ENABLE_PWRON_PASSWORD         ?= 0
@@ -200,7 +200,7 @@ endif
 OBJCOPY = arm-none-eabi-objcopy
 SIZE = arm-none-eabi-size
 
-AUTHOR_STRING ?= EGZUMER
+AUTHOR_STRING ?= VK3RQ
 # the user might not have/want git installed
 # can set own version string here (max 7 chars)
 ifneq (, $(shell $(WHERE) git))
@@ -212,9 +212,9 @@ endif
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
 ifeq (, $(VERSION_STRING))
-	VERSION_STRING := NOGIT
+	VERSION_STRING := RX_Only
 endif
-#VERSION_STRING := 230930b
+VERSION_STRING := RX_Only
 
 
 ASFLAGS = -c -mcpu=cortex-m0
