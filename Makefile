@@ -212,9 +212,9 @@ endif
 # If there is still no VERSION_STRING we need to make one.
 # It is needed for the firmware packing script
 ifeq (, $(VERSION_STRING))
-	VERSION_STRING := RX_Only
+	VERSION_STRING := Freedom
 endif
-VERSION_STRING := RX_Only
+VERSION_STRING := Freedom
 
 
 ASFLAGS = -c -mcpu=cortex-m0
