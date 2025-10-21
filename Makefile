@@ -200,7 +200,7 @@ endif
 OBJCOPY = arm-none-eabi-objcopy
 SIZE = arm-none-eabi-size
 
-AUTHOR_STRING ?= EGZUMER
+AUTHOR_STRING ?= eVOX
 # the user might not have/want git installed
 # can set own version string here (max 7 chars)
 ifneq (, $(shell $(WHERE) git))
@@ -214,7 +214,7 @@ endif
 ifeq (, $(VERSION_STRING))
 	VERSION_STRING := NOGIT
 endif
-#VERSION_STRING := 230930b
+VERSION_STRING := eRADIO
 
 
 ASFLAGS = -c -mcpu=cortex-m0

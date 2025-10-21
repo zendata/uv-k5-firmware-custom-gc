@@ -171,6 +171,7 @@ int32_t TX_freq_check(const uint32_t Frequency)
 
 	switch (gSetting_F_LOCK)
 	{
+		/*
 		case F_LOCK_DEF:
 			if (Frequency >= frequencyBandTable[BAND3_137MHz].lower && Frequency < frequencyBandTable[BAND3_137MHz].upper)
 				return 0;
@@ -230,6 +231,8 @@ int32_t TX_freq_check(const uint32_t Frequency)
 				if (Frequency >= frequencyBandTable[i].lower && Frequency < frequencyBandTable[i].upper)
 					return 0;
 			break;
+		*/
+		// return -1;
 	}
 
 	// dis-allowed TX frequency
