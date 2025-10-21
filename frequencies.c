@@ -162,13 +162,13 @@ uint32_t FREQUENCY_RoundToStep(uint32_t freq, uint16_t step)
 int32_t TX_freq_check(const uint32_t Frequency)
 {	// return '0' if TX frequency is allowed
 	// otherwise return '-1'
-
+	
 	if (Frequency < frequencyBandTable[0].lower || Frequency > frequencyBandTable[BAND_N_ELEM - 1].upper)
 		return 1;  // not allowed outside this range
 
 	if (Frequency >= BX4819_band1.upper && Frequency < BX4819_band2.lower)
 		return -1;  // BX chip does not work in this range
-
+	/*
 	switch (gSetting_F_LOCK)
 	{
 		/*
@@ -234,9 +234,9 @@ int32_t TX_freq_check(const uint32_t Frequency)
 		*/
 		// return -1;
 	}
-
-	// dis-allowed TX frequency
-	return -1;
+	*/
+	// allow ALL TX frequency
+	return 0;
 }
 
 int32_t RX_freq_check(const uint32_t Frequency)
